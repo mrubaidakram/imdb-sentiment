@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imdb-sentiment-analysis"
+version = "0.1.0"
+description = "A transparent text-classification baseline using the Stanford Large Movie Review Dataset, TF-IDF, and logistic regression."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "scikit-learn>=1.4",
+  "joblib>=1.3",
+]
+
+[project.scripts]
+train-imdb-sentiment-analysis = "imdb_sentiment.train:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
